@@ -9,13 +9,15 @@ vim.cmd([[packadd packer.nvim]])
 packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	-- themes secction
-	use({
-		"svrana/neosolarized.nvim",
-		requires = { "tjdevries/colorbuddy.nvim" },
-	})
-	use("folke/tokyonight.nvim")
-	use("ellisonleao/gruvbox.nvim")
-	use("RRethy/nvim-base16")
+	-- use({
+	-- 	"svrana/neosolarized.nvim",
+	-- 	requires = { "tjdevries/colorbuddy.nvim" },
+	-- })
+	-- use("folke/tokyonight.nvim")
+	-- use("ellisonleao/gruvbox.nvim")
+	-- use("RRethy/nvim-base16")
+	use("tjdevries/colorbuddy.nvim")
+	use("marko-cerovac/material.nvim")
 	-- Other plugin
 	use("nvim-lualine/lualine.nvim") -- Statusline
 	use("nvim-lua/plenary.nvim") -- Common utilities

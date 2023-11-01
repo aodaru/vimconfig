@@ -30,6 +30,7 @@ npm install -g @fsouza/prettierd
 
 Recordemos que estamos usando packer como administrador de paquetes en nvim
 
+test
 ```
 use 'wbthomason/packer.nvim'
 use {

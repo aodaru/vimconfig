@@ -15,16 +15,17 @@ keymaps.set("n", "dw", "vb_d")
 keymaps.set("n", "<C-a>", "gg<S-v>G")
 
 -- Jumplist
-keymaps.set("n", "<C-m", "<C-i>", opts)
+keymaps.set("n", "<C-m>", "<C-i>", opts)
 
 -- New tab
-keymaps.set("n", "te", "tabedit", opts)
+keymaps.set("n", "te", ":tabedit<Return>", opts)
 keymaps.set("n", "<tab>", ":tabnext<Return>", opts)
 keymaps.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
 -- Split window
 keymaps.set("n", "ss", ":split<Return>", opts)
 keymaps.set("n", "sv", ":vsplit<Return>", opts)
+
 -- Move between window
 keymaps.set("n", "sh", "<C-w>h")
 keymaps.set("n", "sk", "<C-w>k")

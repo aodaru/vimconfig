@@ -92,6 +92,7 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-emoji",
 			"saadparwaiz1/cmp_luasnip",
+			"rambhosale/cmp-bootstrap.nvim",
 		},
 		opts = function(_, opts)
 			opts.snippet = {
@@ -99,10 +100,36 @@ return {
 					require("luasnip").lsp_expand(args.body)
 				end,
 			}
-			table.insert(opts.sources, { name = "emoji" })
-			table.insert(opts.sources, { name = "luasnip" })
+			table.insert(opts.sources, 1, { name = "emoji" })
+			table.insert(opts.sources, 2, { name = "luasnip" })
+			table.insert(opts.sources, 3, { name = "cmp_bootstrap" })
 		end,
 	},
+
+	-- {
+	-- 	"Jezda1337/nvim-html-css",
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 	},
+	-- 	config = function()
+	-- 		require("html-css"):setup()
+	-- 	end,
+	-- },
+
+	-- {
+	-- 	"rambhosale/cmp-bootstrap.nvim",
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		local cmp = require("cmp")
+	--
+	-- 		cmp.setup.filetype("html", {
+	-- 			sources = cmp.config.sources({
+	-- 				{ name = "cmp_bootstrap" },
+	-- 			}),
+	-- 		})
+	-- 	end,
+	-- },
 
 	{
 		"echasnovski/mini.surround",

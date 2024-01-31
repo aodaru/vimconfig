@@ -101,7 +101,22 @@ return {
 		},
 	},
 
-	{ "nvim-tree/nvim-web-devicons", lazy = true },
+	{
+		"nvim-tree/nvim-web-devicons",
+		lazy = true,
+		config = function()
+			local devicons = require("nvim-web-devicons")
+			devicons.setup({
+				override = {
+					cmp_bootstrap = {
+						icon = "[﯄]",
+						color = "#428850",
+						name = "cmp_bootstrap",
+					},
+				},
+			})
+		end,
+	},
 
 	-- filename
 	{

@@ -2,6 +2,9 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 vim.g.mapleader = " "
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.python3_host_prog = "C:\\Users\\agarcia\\scoop\\shims\\python3.EXE"
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
@@ -20,6 +23,11 @@ vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
 vim.opt.shell = "pwsh"
+vim.opt.shellxquote = ""
+vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
+vim.opt.shellquote = ""
+vim.opt.shellpipe = "| Out-File -Encoding UTF8 %s"
+vim.opt.shellredir = "| Out-File -Encoding UTF8 %s"
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 vim.opt.inccommand = "split"
 vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search

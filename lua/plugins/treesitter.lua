@@ -12,20 +12,18 @@ return {
 				"luap",
 				"css",
 				"gitignore",
-				"go",
-				"graphql",
-				"markdown",
-				"markdown_inline",
+				-- "go",
+				-- "graphql",
 				"regex",
 				"html",
 				"json",
 				"java",
 				"javascript",
 				"typescript",
-				"rust",
+				-- "rust",
 				"scss",
 				"sql",
-				"svelte",
+				-- "svelte",
 				"vim",
 			},
 
@@ -68,7 +66,7 @@ return {
 					mdx = "mdx",
 				},
 			})
-			vim.treesitter.language.register("markdown", "mdx")
+			-- vim.treesitter.language.register("markdown", "mdx")
 		end,
 	},
 }

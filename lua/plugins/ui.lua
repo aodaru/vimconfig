@@ -51,6 +51,9 @@ return {
 
 			opts.presets.lsp_doc_border = true
 		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
 	},
 
 	{
@@ -175,7 +178,7 @@ return {
         ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═════╝ ╚══════╝  ╚═══╝  
       ]]
 
-			logo = string.rep("\n", 8) .. logo .. "\n\n"
+			logo = string.rep("\n", 3) .. logo .. "\n\n"
 			opts.config.header = vim.split(logo, "\n")
 		end,
 	},

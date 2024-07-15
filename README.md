@@ -9,7 +9,7 @@
 
 <div class="d-flex justify-content-center my-3">
 	<div class="imgCoffeeContainer">
-		<img alt="landing" class="imgCoffee" src="https://api.adalgarcia.com/api/post/image/1718833805.png" />
+		<img alt="landing" class="imgCoffee" src="https://adalgarcia.com/assets/img/TazaCafeASCII.gif" />
 		<div class="imgCoffeeBlock"></div>
 	</div>
 </div>

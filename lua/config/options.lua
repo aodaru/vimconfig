@@ -5,7 +5,6 @@
 vim.g.mapleader = " "
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
-vim.g.python3_host_prog = "C:\\Users\\agarcia\\scoop\\shims\\python3.EXE"
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
@@ -23,7 +22,7 @@ vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
-vim.opt.shell = "pwsh"
+vim.opt.shell = "zsh"
 vim.opt.shellxquote = ""
 vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
 vim.opt.shellquote = ""

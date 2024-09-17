@@ -10,6 +10,8 @@ vim.g.python3_host_prog = "C:\\Users\\agarcia\\scoop\\shims\\python3.EXE"
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
+vim.opt.spelllang = "es_es"
+vim.opt.spell = true
 
 vim.opt.number = true
 

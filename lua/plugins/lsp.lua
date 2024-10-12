@@ -10,17 +10,10 @@ return {
 				"typescript-language-server",
 				"css-lsp",
 				"emmet-language-server",
-				-- "remark-language-server",
-				"markdown-oxide",
 				"lemminx",
-				"python-lsp-server",
-				-- ### linting ###
 				"selene",
 				"shellcheck",
-				"luacheck",
 				"phpcs",
-				"markdownlint",
-				"mypy",
 			})
 		end,
 	},
@@ -33,9 +26,6 @@ return {
 			---@type lspconfig.options
 			servers = {
 				cssls = {},
-				markdown_oxide = {
-					filetypes = { "markdown" },
-				},
 				tailwindcss = {
 					root_dir = function(...)
 						return require("lspconfig.util").root_pattern(".git")(...)

@@ -15,27 +15,8 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 -- Disable the concealing in some file formats
 -- The default conceallevel is 3 in LazyVim
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "json", "jsonc", "markdown" },
+	pattern = { "json", "jsonc" },
 	callback = function()
 		vim.opt.conceallevel = 0
-	end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-	group = augroup("markdown"),
-	pattern = { "markdown" },
-	callback = function()
-		vim.opt_local.wrap = true
-		vim.opt_local.spell = true
-		vim.opt_local.spelllang = "es"
-	end,
-})
-
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-	group = augroup("markdown"),
-	pattern = { "*.md" },
-	callback = function()
-		vim.opt_local.spell = true
-		vim.opt_local.spelllang = "es"
 	end,
 })

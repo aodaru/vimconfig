@@ -7,7 +7,7 @@ local opts = { noremap = true, silent = true }
 
 -- Increment/decrement
 keymaps.set("n", "+", "<C-a>")
-keymaps.set("n", "+", "<C-a>")
+keymaps.set("n", "-", "<C-x>")
 
 -- Delete a word backwards
 keymaps.set("n", "dw", "vb_d")

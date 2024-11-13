@@ -97,7 +97,7 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-emoji",
 			-- "saadparwaiz1/cmp_luasnip",
-			"rambhosale/cmp-bootstrap.nvim",
+			-- "rambhosale/cmp-bootstrap.nvim",
 		},
 		opts = function(_, opts)
 			opts.snippet = {

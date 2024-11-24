@@ -1,10 +1,11 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.luasnip",
-    "lazyvim.plugins.extras.coding.mini-surround"
+    "lazyvim.plugins.extras.coding.mini-surround",
+    "lazyvim.plugins.extras.ui.dashboard-nvim"
   ],
   "news": {
-    "NEWS.md": "7107",
+    "NEWS.md": "7429",
     "doc/news.txt": "24923"
   },
   "version": 7

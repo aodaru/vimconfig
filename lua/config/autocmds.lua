@@ -20,3 +20,11 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt.conceallevel = 0
 	end,
 })
+
+-- Set color to dashboard
+vim.cmd([[hi DashboardHeader guifg=#d79921]])
+vim.cmd([[hi DashboardDesc guifg=#ebdbb2]])
+vim.cmd([[hi DashboardKey guifg=#458588]])
+vim.cmd([[hi DashboardIcon guifg=#8ec07c]])
+vim.cmd([[hi DashboardShorCut guifg=#d79921]])
+vim.cmd([[hi DashboardFooter guifg=#cc241d]])

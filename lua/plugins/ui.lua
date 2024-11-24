@@ -124,12 +124,6 @@ return {
 					groups = {
 						InclineNormal = { guibg = "#1d2021", guifg = "#f9f5d7" },
 						InclineNormalNC = { guifg = "#fbf1c7", guibg = "#282828" },
-						DashboardHeader = { guibg = "#1d2021", guifg = "#574893" },
-						DashboardDesc = { guibg = "#1d2021", guifg = "#282" },
-						DashboardKey = { guibg = "#1d2021", guifg = "#282" },
-						DashboardIcon = { guibg = "#1d2021", guifg = "#282" },
-						DashboardShortCut = { guibg = "#1d2021", guifg = "#282" },
-						DashboardFooter = { guibg = "#1d2021", guifg = "#282" },
 					},
 				},
 				window = { margin = { vertical = 0, horizontal = 1 } },
@@ -195,7 +189,7 @@ return {
         ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═════╝ ╚══════╝  ╚═══╝  
     ]]
 
-			logo = string.rep("\n", 1) .. logo .. "\n\n"
+			logo = string.rep("\n", 4) .. logo .. "\n\n\n"
 
 			local opts = {
 				theme = "doom",

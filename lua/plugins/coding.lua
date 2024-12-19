@@ -107,7 +107,7 @@ return {
 			}
 			table.insert(opts.sources, 1, { name = "emoji" })
 			-- table.insert(opts.sources, 2, { name = "luasnip" })
-			table.insert(opts.sources, 3, { name = "cmp_bootstrap" })
+			-- table.insert(opts.sources, 3, { name = "cmp_bootstrap" })
 		end,
 	},
 }

@@ -177,7 +177,7 @@ return {
 
 	{
 		"nvimdev/dashboard-nvim",
-		lazy = false,
+		lazy = true,
 		event = "VimEnter",
 		opts = function()
 			local logo = [[
@@ -189,7 +189,7 @@ return {
         ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═════╝ ╚══════╝  ╚═══╝  
     ]]
 
-			logo = string.rep("\n", 4) .. logo .. "\n\n\n"
+			logo = string.rep("\n", 3) .. logo .. "\n\n\n"
 
 			local opts = {
 				theme = "doom",

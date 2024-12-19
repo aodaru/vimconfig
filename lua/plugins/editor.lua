@@ -46,8 +46,10 @@ return {
 	},
 
 	{
-		"telescope.nvim",
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.8",
 		dependencies = {
+			{ "nvim-lua/plenary.nvim" },
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
 				build = "make",
@@ -139,8 +141,9 @@ return {
 						hidden = true,
 						grouped = true,
 						previewer = false,
+						theme = "ivy",
 						initial_mode = "normal",
-						layout_config = { height = 40 },
+						layout_config = { height = 20 },
 					})
 				end,
 				desc = "Open File Browser with the path of the current buffer",
@@ -151,7 +154,7 @@ return {
 			local actions = require("telescope.actions")
 			local fb_actions = require("telescope").extensions.file_browser.actions
 
-			opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
+			opts.defaults = {
 				wrap_results = true,
 				layout_strategy = "horizontal",
 				layout_config = { prompt_position = "top" },
@@ -160,7 +163,7 @@ return {
 				mappings = {
 					n = {},
 				},
-			})
+			}
 			opts.pickers = {
 				diagnostics = {
 					theme = "ivy",
@@ -172,7 +175,7 @@ return {
 			}
 			opts.extensions = {
 				file_browser = {
-					theme = "dropdown",
+					theme = "ivy",
 					-- disables netrw and use telescope-file-browser in its place
 					hijack_netrw = true,
 					mappings = {

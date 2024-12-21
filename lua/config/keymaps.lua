@@ -42,3 +42,24 @@ keymaps.set("n", "<C-w><down>", "<C-w>-")
 keymaps.set("n", "<C-j>", function()
 	vim.diagnostic.goto_next()
 end, opts)
+
+-- FzF-lua
+-- keymaps.set("n", "sf", require("fzf-lua").files, { desc = "Fzf Files" })
+-- keymaps.set("n", ";r", require("fzf-lua").live_grep, { desc = "Fzf Grep" })
+-- keymaps.set("n", ";m", require("fzf-lua").marks, { desc = "Fzf Marks" })
+-- keymaps.set("n", ";t", require("fzf-lua").tags, { desc = "Fzf Tags" })
+-- keymaps.set("n", ";;", require("fzf-lua").resume, { desc = "Fzf Resume" })
+-- keymaps.set("n", "\\\\", require("fzf-lua").buffers, { desc = "Fzf Recent" })
+-- keymaps.set("n", ";q", require("fzf-lua").buffers, { desc = "Fzf QuickFix" })
+keymaps.set(
+	"n",
+	"<leader>s",
+	":lua require'fzf-lua'.spell_suggest({ winopts = {relative='cursor',row=1.01,col=0, height=0.2, width=0.2}}) <cr>",
+	{ desc = "Spell Suggest" }
+)
+-- keymaps.set(
+-- 	"n",
+-- 	"<leader>ca",
+-- 	":lua require'fzf-lua'.lsp_code_actions({ winopts = {relative='cursor',row=1.01,col=0, height=0.2, width=0.4}}) <cr>",
+-- 	{ desc = "Code Action" }
+-- )

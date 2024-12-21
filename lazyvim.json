@@ -1,8 +1,7 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.luasnip",
-    "lazyvim.plugins.extras.coding.mini-surround",
-    "lazyvim.plugins.extras.ui.dashboard-nvim"
+    "lazyvim.plugins.extras.coding.mini-surround"
   ],
   "news": {
     "NEWS.md": "10960",

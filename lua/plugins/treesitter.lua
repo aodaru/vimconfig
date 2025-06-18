@@ -1,6 +1,4 @@
 return {
-	-- { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" },
-
 	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
@@ -10,28 +8,23 @@ return {
 				"lua",
 				-- "luadoc",
 				-- "luap",
-				-- "css",
+				"css",
 				-- "gitignore",
 				-- "go",
 				-- "graphql",
 				-- "regex",
-				-- "html",
+				"html",
+				"php",
 				-- "json",
 				-- "java",
 				"javascript",
 				"typescript",
-				-- "rust",
 				"scss",
 				-- "sql",
 				-- "svelte",
 				-- "vim",
 			},
 
-			-- matchup = {
-			-- 	enable = true,
-			-- },
-
-			-- https://github.com/nvim-treesitter/playground#query-linter
 			query_linter = {
 				enable = true,
 				use_virtual_text = true,
@@ -57,15 +50,5 @@ return {
 				},
 			},
 		},
-		config = function(_, opts)
-			require("nvim-treesitter.configs").setup(opts)
-
-			-- MDX
-			vim.filetype.add({
-				extension = {
-					mdx = "mdx",
-				},
-			})
-		end,
 	},
 }

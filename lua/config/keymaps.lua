@@ -40,7 +40,7 @@ keymaps.set("n", "<C-w><down>", "<C-w>-")
 
 -- Diagnostic
 keymaps.set("n", "<C-j>", function()
-	vim.diagnostic.goto_next()
+	vim.diagnostic.jump({ 1 })
 end, opts)
 
 -- FzF-lua

@@ -5,7 +5,6 @@ return {
 		opts = function(_, opts)
 			vim.list_extend(opts.ensure_installed, {
 				-- "stylua",
-				-- "shfmt",
 				"tailwindcss-language-server",
 				"typescript-language-server",
 				-- "css-lsp",
@@ -13,7 +12,7 @@ return {
 				-- "lemminx",
 				-- "selene",
 				-- "shellcheck",
-				-- "phpcs",
+				"phpcs",
 			})
 		end,
 	},
@@ -23,7 +22,7 @@ return {
 		"neovim/nvim-lspconfig",
 		opts = {
 			inlay_hints = { enabled = true },
-			---@type lspconfig.options
+			--@type lspconfig.options
 			servers = {
 				cssls = {},
 				tailwindcss = {
@@ -61,7 +60,9 @@ return {
 						},
 					},
 				},
-				html = {},
+				emmet_language_server = {
+					filetypes = { "php", "html", "javascript", "typescript", "blade", "astro" },
+				},
 				yamlls = {
 					settings = {
 						yaml = {

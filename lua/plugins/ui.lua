@@ -48,6 +48,12 @@ return {
 	},
 
 	{
+		"tribela/transparent.nvim",
+		event = "VimEnter",
+		config = true,
+	},
+
+	{
 		"rcarriga/nvim-notify",
 		opts = {
 			timeout = 5000,

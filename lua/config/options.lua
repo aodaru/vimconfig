@@ -10,8 +10,6 @@ vim.g.python3_host_prog = "C:\\Users\\agarcia\\scoop\\shims\\python3.EXE"
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
-vim.opt.spelllang = "es_es"
-vim.opt.spell = false
 
 vim.opt.number = true
 
@@ -74,7 +72,7 @@ end
 -- Spell check setup
 --
 -- Filetypes to enable spellcheck
-local spell_types = { "text", "plaintex", "typst", "gitcommit", "markdown" }
+local spell_types = { "text", "plaintext", "markdown" }
 
 -- Set global spell option to false initially to disable it for all file types
 vim.opt.spell = false
@@ -88,6 +86,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = spell_types, -- Only apply to these file types
 	callback = function()
 		vim.opt_local.spell = true -- Enable spellcheck for these file types
+		vim.opt_local.spelllang = "en_us,es"
 	end,
 	desc = "Enable spellcheck for defined filetypes", -- Description for clarity
 })

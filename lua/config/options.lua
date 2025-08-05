@@ -5,7 +5,20 @@
 vim.g.mapleader = " "
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
-vim.g.python3_host_prog = "C:\\Users\\agarcia\\scoop\\shims\\python3.EXE"
+vim.g.loaded_perl_provider = 0
+vim.g.clipboard = "unnamed", "unnamedplus"
+-- vim.g.clipboard = {
+-- 	name = "wayclip",
+-- 	copy = {
+-- 		["+"] = { "wl-copy" },
+-- 		["*"] = { "wl-copy" },
+-- 	},
+-- 	paste = {
+-- 		["+"] = { "wl-paste" },
+-- 		["*"] = { "wl-paste" },
+-- 	},
+-- 	cache_enable = 1,
+-- }
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
@@ -23,7 +36,7 @@ vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
-vim.opt.shell = "pwsh"
+vim.opt.shell = "zsh"
 vim.opt.shellxquote = ""
 vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
 vim.opt.shellquote = ""
@@ -47,6 +60,10 @@ vim.opt.mouse = ""
 -- vim.opt.foldmethod = "indent"
 -- vim.opt.foldlevel = 3
 -- vim.opt.termguicolors = true
+
+-- luarocks disable hererocks
+-- vim.opt.rocks.hererocks = false
+-- vim.opt.rocks.enabled = false
 
 -- Undercurl linux
 vim.cmd([[let &t_Cs = "`e[4:3m"]])

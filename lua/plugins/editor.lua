@@ -295,7 +295,7 @@ return {
 			},
 			formatters_by_ft = {
 				lua = { "stylua" },
-				fish = { "fish_indent" },
+				-- fish = { "fish_indent" },
 				sh = { "shfmt" },
 				javascript = { "prettier", stop_after_first = true },
 				php = { "phpcbf" },

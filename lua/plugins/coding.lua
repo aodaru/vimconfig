@@ -60,8 +60,11 @@ return {
         preset = "default",
         ["<Tab>"] = { "select_next", "fallback" },
         ["<S-Tab>"] = { "select_prev", "fallback" },
-        ["<C-CR>"] = { "accept", "fallback" },
+        ["<C-Space>"] = { "accept", "fallback" },
       },
     },
+    require("render-markdown").setup({
+      completions = { blink = { enabled = true } },
+    }),
   },
 }

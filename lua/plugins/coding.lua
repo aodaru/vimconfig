@@ -1,56 +1,68 @@
 return {
   {
-    {
-      "neovim/nvim-lspconfig",
-      opts = {
-        servers = {
-          emmet_ls = {
-            filetypes = {
-              "html",
-              "css",
-              "javascriptreact",
-              "typescriptreact",
-              "ejs", -- Example: Adding EJS file type
-              "blade",
-            },
-            -- Other Emmet options can be configured here
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        emmet_ls = {
+          filetypes = {
+            "html",
+            "css",
+            "javascriptreact",
+            "typescriptreact",
+            "ejs", -- Example: Adding EJS file type
+            "blade",
           },
-          cssls = {
-            filetype = {
-              "css",
-              "scss",
-            },
+          -- Other Emmet options can be configured here
+        },
+        cssls = {
+          filetype = {
+            "css",
+            "scss",
           },
         },
       },
     },
   },
   {
-    -- Add a Treesitter parser for Laravel Blade to provide Blade syntax highlighting.
     "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, {
-        "blade",
-        "php_only",
-      })
-    end,
-    config = function(_, opts)
+    build = ":TSUpdate",
+    config = function()
+      -- Custom filetype detection for .blade.php files.
       vim.filetype.add({
         pattern = {
           [".*%.blade%.php"] = "blade",
         },
       })
 
-      require("nvim-treesitter.configs").setup(opts)
-      local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-      parser_config.blade = {
-        install_info = {
-          url = "https://github.com/EmranMR/tree-sitter-blade",
-          files = { "src/parser.c" },
-          branch = "main",
+      -- NOTE: This is a simplified, explicit configuration.
+      -- The previous method of extending 'opts' was causing load order issues.
+      -- You may need to add other language parsers to the 'ensure_installed' list
+      -- if they were provided by your base Neovim configuration.
+      require("nvim-treesitter").setup({
+        ensure_installed = {
+          "blade",
+          "php_only",
+          "lua",
+          "vim",
+          "vimdoc",
+          "javascript",
+          "html",
+          "css",
         },
-        filetype = "blade",
-      }
+        auto_install = true,
+        highlight = { enable = true },
+        indent = { enable = true },
+        parser_config = {
+          blade = {
+            install_info = {
+              url = "https://github.com/EmranMR/tree-sitter-blade",
+              files = { "src/parser.c" },
+              branch = "main",
+            },
+            filetype = "blade",
+          },
+        },
+      })
     end,
   },
   {
@@ -63,8 +75,10 @@ return {
         ["<C-Space>"] = { "accept", "fallback" },
       },
     },
-    require("render-markdown").setup({
-      completions = { blink = { enabled = true } },
-    }),
+    config = function()
+      require("render-markdown").setup({
+        completions = { blink = { enabled = true } },
+      })
+    end,
   },
 }
